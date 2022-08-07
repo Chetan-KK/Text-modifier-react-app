@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Text-modifier-react-app/static/css/main.3fdbde14.css",
-    "main.js": "/Text-modifier-react-app/static/js/main.443ce6c3.js",
+    "main.css": "/Text-modifier-react-app/static/css/main.25ae4125.css",
+    "main.js": "/Text-modifier-react-app/static/js/main.cf3df855.js",
     "static/js/787.c0cae944.chunk.js": "/Text-modifier-react-app/static/js/787.c0cae944.chunk.js",
     "index.html": "/Text-modifier-react-app/index.html",
-    "main.3fdbde14.css.map": "/Text-modifier-react-app/static/css/main.3fdbde14.css.map",
-    "main.443ce6c3.js.map": "/Text-modifier-react-app/static/js/main.443ce6c3.js.map",
+    "main.25ae4125.css.map": "/Text-modifier-react-app/static/css/main.25ae4125.css.map",
+    "main.cf3df855.js.map": "/Text-modifier-react-app/static/js/main.cf3df855.js.map",
     "787.c0cae944.chunk.js.map": "/Text-modifier-react-app/static/js/787.c0cae944.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3fdbde14.css",
-    "static/js/main.443ce6c3.js"
+    "static/css/main.25ae4125.css",
+    "static/js/main.cf3df855.js"
   ]
 }
