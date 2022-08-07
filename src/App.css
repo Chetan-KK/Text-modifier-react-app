@@ -10,6 +10,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--bg-color-dark);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--text-color);
+}
 body {
   background-color: var(--bg-color);
 }

@@ -10,6 +10,7 @@
 }
 .form h1 {
   margin: 0.5rem 0;
+  text-decoration: underline;
 }
 .form textarea {
   height: 15rem;
@@ -20,8 +21,9 @@
   border-bottom: 2px solid var(--text-color);
 }
 .buttons {
+  flex-wrap: wrap;
   margin-top: 2rem;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .buttons button {
   margin: 0 1rem;
@@ -56,7 +58,7 @@
     font-size: 1rem;
   }
   .buttons button {
-    margin: 0 0.5rem;
+    margin: 0.5rem 0.5rem;
     font-size: 1rem;
   }
   .summary {
