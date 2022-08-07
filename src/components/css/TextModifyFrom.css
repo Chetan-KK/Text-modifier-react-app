@@ -24,6 +24,7 @@
   justify-content: space-around;
 }
 .buttons button {
+  margin: 0 1rem;
   padding: 0.3rem 1rem;
   background-color: var(--bg-color-dark);
   font-size: 1.3rem;
@@ -40,4 +41,25 @@
 }
 .summary li {
   margin: 0.3rem 0;
+}
+@media screen and (max-width: 500px) {
+  .form > * {
+    width: 90vw;
+  }
+  .form {
+    padding: 1rem 0;
+  }
+  .form h1 {
+    font-size: 1.5rem;
+  }
+  .form textarea {
+    font-size: 1rem;
+  }
+  .buttons button {
+    margin: 0 0.5rem;
+    font-size: 1rem;
+  }
+  .summary {
+    padding: 0 1rem;
+  }
 }

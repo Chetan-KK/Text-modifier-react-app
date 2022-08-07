@@ -15,3 +15,11 @@ header nav .link {
 header nav .link:hover {
   text-decoration: underline;
 }
+@media screen and (max-width: 500px) {
+  header {
+    flex-direction: column;
+  }
+  header .logo {
+    margin-bottom: 1rem;
+  }
+}

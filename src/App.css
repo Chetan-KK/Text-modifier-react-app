@@ -1,7 +1,7 @@
 :root {
   --bg-color: rgb(15, 15, 15);
   --bg-color-dark: rgb(25, 25, 25);
-  --text-color: white;
+  --text-color: rgb(175, 239, 255);
 }
 *,
 *::before,
