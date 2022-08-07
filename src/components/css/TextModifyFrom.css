@@ -1,0 +1,43 @@
+.form {
+  flex-direction: column;
+  padding: 2rem 0;
+}
+.form * {
+  color: var(--text-color);
+}
+.form > * {
+  width: 80vw;
+}
+.form h1 {
+  margin: 0.5rem 0;
+}
+.form textarea {
+  height: 15rem;
+  font-size: 1.3rem;
+  background-color: var(--bg-color-dark);
+  border: none;
+  padding: 1rem;
+  border-bottom: 2px solid var(--text-color);
+}
+.buttons {
+  margin-top: 2rem;
+  justify-content: space-around;
+}
+.buttons button {
+  padding: 0.3rem 1rem;
+  background-color: var(--bg-color-dark);
+  font-size: 1.3rem;
+  border: none;
+  border-bottom: 2px solid var(--text-color);
+  transition: 200ms;
+}
+
+.buttons button:hover {
+  box-shadow: 0 0 0 2px var(--text-color);
+}
+.summary h1 {
+  margin: 2rem 0 1rem 0;
+}
+.summary li {
+  margin: 0.3rem 0;
+}

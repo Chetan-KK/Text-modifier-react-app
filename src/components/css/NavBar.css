@@ -1,0 +1,17 @@
+header {
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--bg-color-dark);
+  border-bottom: 2px solid var(--text-color);
+}
+header .logo {
+  color: var(--text-color);
+}
+header nav .link {
+  text-decoration: none;
+  color: var(--text-color);
+  margin: 0 1rem;
+}
+header nav .link:hover {
+  text-decoration: underline;
+}
