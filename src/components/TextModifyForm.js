@@ -22,6 +22,11 @@ export default function TextModifyFrom() {
         setText(text + 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In dolore temporibus est debitis? Voluptate recusandae architecto consequatur sed itaque ratione reiciendis officia labore quas dolore accusamus voluptas ad, praesentium suscipit.');
     }
 
+    function handleCopyButton() {
+        navigator.clipboard.writeText(text);
+        alert('text copied');
+    }
+
     const [text, setText] = useState('');
     return (
         <div className='form flex'>
@@ -33,6 +38,7 @@ export default function TextModifyFrom() {
                 <button onClick={handleUpperButton}>Convert to Uppercase</button>
                 <button onClick={handleLowerButton}>Convert to Lowercase</button>
                 <button onClick={handleClearButton}>Clear All</button>
+                <button onClick={handleCopyButton}>Copy Modified Text</button>
             </div>
             <div className="summary">
                 <h1 className="title">Your content summary :</h1>

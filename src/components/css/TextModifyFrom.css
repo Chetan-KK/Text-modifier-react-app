@@ -1,6 +1,6 @@
 .form {
   flex-direction: column;
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 .form * {
   color: var(--text-color);
@@ -22,17 +22,18 @@
 }
 .buttons {
   flex-wrap: wrap;
-  margin-top: 2rem;
-  justify-content: space-between;
+  margin-top: 1rem;
+  justify-content: center;
 }
 .buttons button {
-  margin: 0 1rem;
+  min-width: 230px;
+  margin: 0.5rem 1rem;
   padding: 0.3rem 1rem;
   background-color: var(--bg-color-dark);
   font-size: 1.3rem;
   border: none;
   border-bottom: 2px solid var(--text-color);
-  transition: 200ms;
+  transition: box-shadow 200ms;
 }
 
 .buttons button:hover {

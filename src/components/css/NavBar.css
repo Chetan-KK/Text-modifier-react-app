@@ -8,6 +8,7 @@ header .logo {
   color: var(--text-color);
 }
 header nav .link {
+  cursor: pointer;
   text-decoration: none;
   color: var(--text-color);
   margin: 0 1rem;
@@ -15,11 +16,21 @@ header nav .link {
 header nav .link:hover {
   text-decoration: underline;
 }
+#modeChangeButton {
+  font-size: 1.3rem;
+}
 @media screen and (max-width: 500px) {
   header {
     flex-direction: column;
   }
   header .logo {
     margin-bottom: 1rem;
+  }
+  header nav {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  header nav .link {
+    margin: 0.3rem 1rem;
   }
 }

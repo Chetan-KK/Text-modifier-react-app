@@ -3,6 +3,11 @@
   --bg-color-dark: rgb(25, 25, 25);
   --text-color: rgb(175, 239, 255);
 }
+.lightMode {
+  --bg-color: rgb(240, 240, 240);
+  --bg-color-dark: rgb(255, 255, 255);
+  --text-color: rgb(0, 78, 180);
+}
 *,
 *::before,
 *::after {
