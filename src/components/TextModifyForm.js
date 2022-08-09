@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import './css/TextModifyFrom.css';
 
+
 export default function TextModifyFrom() {
+
+    const [text, setText] = useState('');
 
     function handleOnChange(e) {
         setText(e.target.value);
@@ -23,11 +26,17 @@ export default function TextModifyFrom() {
     }
 
     function handleCopyButton() {
+        text.select();
+        text.setSelectionRange(0, 99999);
         navigator.clipboard.writeText(text);
         alert('text copied');
+
+    }
+    function handleExtraSpaceButton() {
+        let newText = text.split(/[ ]+/);
+        setText(newText.join(' '));
     }
 
-    const [text, setText] = useState('');
     return (
         <div className='form flex'>
             <h1>Your text :</h1>
@@ -38,6 +47,7 @@ export default function TextModifyFrom() {
                 <button onClick={handleUpperButton}>Convert to Uppercase</button>
                 <button onClick={handleLowerButton}>Convert to Lowercase</button>
                 <button onClick={handleClearButton}>Clear All</button>
+                <button onClick={handleExtraSpaceButton}>Remove Extra Spaces</button>
                 <button onClick={handleCopyButton}>Copy Modified Text</button>
             </div>
             <div className="summary">

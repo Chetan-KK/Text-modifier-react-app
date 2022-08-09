@@ -1,21 +1,28 @@
 import React, { useState } from 'react';
 import './css/NavBar.css';
-document.cookie = 'mode=light';
+
 
 export default function NavBar(props) {
 
-    const [modeText, setModeText] = useState(<i class="fa-solid fa-sun"></i>);
+    function darkMode() {
+        document.body.classList.remove('lightMode');
+        setModeText(<i className="fa-solid fa-sun"></i>);
+        document.cookie = 'mode=light';
+    }
+    function lightMode() {
+        document.body.classList.add('lightMode');
+        setModeText(<i className="fa-solid fa-moon"></i>);
+        document.cookie = 'mode=dark';
+    }
+
+    const [modeText, setModeText] = useState(<i className="fa-solid fa-sun"></i>);
 
     function handleModeChange() {
         if (document.cookie === 'mode=light') {
-            document.body.classList.add('lightMode');
-            setModeText(<i class="fa-solid fa-moon"></i>);
-            document.cookie = 'mode=dark';
+            lightMode();
         }
         else {
-            document.body.classList.remove('lightMode');
-            setModeText(<i class="fa-solid fa-sun"></i>);
-            document.cookie = 'mode=light';
+            darkMode();
         }
     }
 
