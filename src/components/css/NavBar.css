@@ -7,30 +7,70 @@ header {
 header .logo {
   color: var(--text-color);
 }
-header nav .link {
+header nav .link,
+#navToggle {
   cursor: pointer;
   text-decoration: none;
   color: var(--text-color);
   margin: 0 1rem;
 }
-header nav .link:hover {
-  text-decoration: underline;
-}
 #modeChangeButton {
   font-size: 1.3rem;
 }
+#navToggle {
+  font-size: 2rem;
+}
+header nav .link:hover {
+  text-decoration: underline;
+}
 @media screen and (max-width: 500px) {
-  header {
-    flex-direction: column;
+  #navToggleClose {
+    position: fixed;
   }
-  header .logo {
-    margin-bottom: 1rem;
+  #navToggleClose {
+    font-size: 3rem;
+    top: 5px;
+    right: 15px;
+  }
+  #modeChangeButton {
+    position: fixed;
+    top: 20px;
+    left: 25px;
+    font-size: 1.5rem;
+  }
+  #colorForTheme {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 50px;
+    width: 100%;
+    border: 2px solid var(--text-color);
+    background-color: transparent;
+  }
+  #colorForTheme::-webkit-color-swatch {
+    border: none;
+    border-radius: 10px;
   }
   header nav {
-    justify-content: center;
+    padding: 5rem 2rem 2rem;
+    align-items: flex-start;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.164);
+    backdrop-filter: blur(4px);
+    border-left: 2px solid var(--text-color);
+    width: 80vw;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    transform: translateX(80vw);
+    flex-direction: column;
+    justify-content: start;
+    align-items: baseline !important;
     flex-wrap: wrap;
+    transition: 200ms;
   }
   header nav .link {
-    margin: 0.3rem 1rem;
+    margin: 0.8rem 1rem;
+    font-size: 1.3rem;
   }
 }
