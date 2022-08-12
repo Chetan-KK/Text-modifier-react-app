@@ -23,11 +23,27 @@ header nav .link,
 header nav .link:hover {
   text-decoration: underline;
 }
+
+#colorForTheme {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background-color: transparent;
+}
+#navToggle {
+  display: none;
+}
+#navToggleClose {
+  display: none;
+}
 @media screen and (max-width: 500px) {
-  #navToggleClose {
-    position: fixed;
+  #navToggle {
+    display: block;
   }
   #navToggleClose {
+    display: block;
+    position: fixed;
     font-size: 3rem;
     top: 5px;
     right: 15px;
@@ -38,18 +54,15 @@ header nav .link:hover {
     left: 25px;
     font-size: 1.5rem;
   }
-  #colorForTheme {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    height: 50px;
-    width: 100%;
-    border: 2px solid var(--text-color);
-    background-color: transparent;
-  }
+
   #colorForTheme::-webkit-color-swatch {
     border: none;
     border-radius: 10px;
+  }
+  #colorForTheme {
+    height: 50px;
+    width: 100%;
+    border: 2px solid var(--text-color);
   }
   header nav {
     padding: 5rem 2rem 2rem;
