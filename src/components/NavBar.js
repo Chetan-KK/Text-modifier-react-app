@@ -53,7 +53,7 @@ export default function NavBar(props) {
                 <a href="/" className="link">About</a>
                 <a href="/" className="link">Projects</a>
                 <a href="/" className="link">Contact</a>
-                <span className='link'>select a color for theme</span>
+                <span className='link'>select a color for dark mode</span>
                 <input type="color" id='colorForTheme' onChange={changeTheme} />
             </nav>
         </header>
