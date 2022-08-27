@@ -26,12 +26,15 @@ export default function TextModifyFrom() {
     }
 
     function handleCopyButton() {
-        text.select();
+        var copyText = document.getElementById("textarea");
 
-        //this is for mobile
-        text.setSelectionRange(0, 99999);
-        navigator.clipboard.writeText(text);
-        alert('text copied');
+
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+
+        navigator.clipboard.writeText(copyText.value);
+
+        alert("Text copied: " + copyText.value);
 
     }
     function handleExtraSpaceButton() {
