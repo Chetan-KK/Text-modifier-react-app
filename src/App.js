@@ -10,6 +10,7 @@ function App() {
       <NavBar title='Text Modifier' />
       <Routes>
         <Route exact path="/" element={<TextModifyFrom />} />
+        <Route exact path="*" element={<TextModifyFrom />} />
         <Route exact path="/about" element={<About />} />
       </Routes>
     </>
