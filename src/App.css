@@ -19,7 +19,8 @@
   outline: 2px solid var(--text-color);
 }
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 0px;
+  position: absolute;
   background-color: var(--bg-color-dark);
 }
 ::-webkit-scrollbar-thumb {

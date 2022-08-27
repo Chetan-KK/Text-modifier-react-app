@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './css/NavBar.css';
+import { Link } from 'react-router-dom';
 
 
 export default function NavBar(props) {
@@ -49,8 +50,8 @@ export default function NavBar(props) {
             <nav className='flex' id='nav'>
                 <span className='link' id='navToggleClose' onClick={closeNav}>&times;</span>
                 <span className='link' id='modeChangeButton' onClick={handleModeChange}>{modeText}</span>
-                <a href="/" className="link">Home</a>
-                <a href="/" className="link">About</a>
+                <Link to="/" className="link">Home</Link>
+                <Link to="/about" className="link">About</Link>
                 <a href="/" className="link">Projects</a>
                 <a href="/" className="link">Contact</a>
                 <span className='link'>select a color for dark mode</span>
