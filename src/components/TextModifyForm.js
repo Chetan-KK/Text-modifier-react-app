@@ -30,9 +30,9 @@ export default function TextModifyFrom() {
 
 
         copyText.select();
-        copyText.setSelectionRange(0, 99999);
 
         navigator.clipboard.writeText(copyText.value);
+
 
         alert("Text copied: " + copyText.value);
 
@@ -57,6 +57,7 @@ export default function TextModifyFrom() {
         }
     }
 
+
     return (
         <div className='form flex'>
             <h1>Your text :</h1>
@@ -64,12 +65,12 @@ export default function TextModifyFrom() {
             <div className="buttons flex">
 
                 <button onClick={handleAutoTextButton}>create dummy text</button>
-                <button onClick={handleUpperButton}>Convert to Uppercase</button>
-                <button onClick={handleLowerButton}>Convert to Lowercase</button>
-                <button onClick={handleJustifyButton}>{justify}</button>
-                <button onClick={handleClearButton}>Clear All</button>
-                <button onClick={handleExtraSpaceButton}>Remove Extra Spaces</button>
-                <button onClick={handleCopyButton}>Copy Modified Text</button>
+                <button onClick={handleUpperButton} disabled={text.length === 0}>Convert to Uppercase</button>
+                <button onClick={handleLowerButton} disabled={text.length === 0}>Convert to Lowercase</button>
+                <button onClick={handleJustifyButton} disabled={text.length === 0}>{justify}</button>
+                <button onClick={handleClearButton} disabled={text.length === 0}>Clear All</button>
+                <button onClick={handleExtraSpaceButton} disabled={text.length === 0}>Remove Extra Spaces</button>
+                <button onClick={handleCopyButton} disabled={text.length === 0}>Copy Modified Text</button>
             </div>
             <div className="summary">
                 <h1 className="title">Your content summary :</h1>
@@ -78,7 +79,9 @@ export default function TextModifyFrom() {
                         No. of characters: {text.length}
                     </li>
                     <li>
-                        No. of words: {(text.split(' ').length) - 1}
+                        No. of words: {(text.split(' ').filter((e) => {
+                            return e.length !== 0;
+                        }).length)}
                     </li>
                 </ul>
             </div>

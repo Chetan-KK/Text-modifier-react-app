@@ -36,6 +36,13 @@
   transition: box-shadow 200ms;
 }
 
+.buttons button:disabled {
+  color: gray;
+  border-color: gray;
+}
+.buttons button:disabled:hover {
+  box-shadow: none;
+}
 .buttons button:hover {
   box-shadow: 0 0 0 2px var(--text-color);
 }
